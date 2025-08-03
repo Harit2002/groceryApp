@@ -1,0 +1,23 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crio
+    username: postgres
+    password: password
+    hikari:
+      auto-commit: true
+      pool-name: HikariPool-1
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: false
+        default_schema: public
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
